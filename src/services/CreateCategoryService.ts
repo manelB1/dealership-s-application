@@ -7,7 +7,6 @@ interface Irequest {
 }
 
 class CreateCateoryService {
-
     constructor(private categoriesRepository: CategoriesRepository) {
 
     }
