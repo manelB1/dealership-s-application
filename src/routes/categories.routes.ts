@@ -10,7 +10,8 @@ categoriesRoutes.post("/", (resquest, response) => {
     const { name, description } = resquest.body;
     const createCategoryService = new CreateCateoryService(categoriesRepository);
     createCategoryService.execute({ name, description })
-    response.status(201).send()
+
+    return response.status(201).send()
 })
 
 categoriesRoutes.get("/", (_, response) => {
