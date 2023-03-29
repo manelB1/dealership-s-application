@@ -13,6 +13,8 @@ class CreateCateoryService {
     }
     execute({ name, description }: Irequest): void {
         const categoryAlreadyExists = this.categoriesRepository.findByName(name);
+        console.log(categoryAlreadyExists);
+        
 
         if (categoryAlreadyExists) {
             throw new Error("category already exists")
